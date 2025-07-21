@@ -19,7 +19,6 @@ A modern, responsive portfolio website built with **Next.js**, **React.js**, and
 - **Frontend**: React.js, Next.js 15
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
-- **Icons**: Lucide React
 - **Deployment**: Vercel (recommended)
 
 ## 🎨 Design Features
@@ -213,7 +212,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Next.js](https://nextjs.org/) for the amazing framework
 - [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS
 - [Framer Motion](https://www.framer.com/motion/) for smooth animations
-- [Lucide React](https://lucide.dev/) for beautiful icons
 - [Unsplash](https://unsplash.com/) for project images
 
 ## 📞 Contact
