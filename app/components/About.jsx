@@ -2,13 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import { assets, skills } from '@/assets/assets'
 import { motion } from "motion/react"
-import { Code, GraduationCap, Briefcase, Star, Download } from 'lucide-react'
+import { FiCode, FiBookOpen, FiBriefcase, FiStar, FiDownload } from 'react-icons/fi'
 
 const About = ({isDarkMode}) => {
   const infoItems = [
-    { icon: Code, title: 'Technologies', description: 'React.js, Next.js, TypeScript, Tailwind CSS, Node.js' },
-    { icon: GraduationCap, title: 'Education', description: 'B.Tech in Computer Science & Engineering' },
-    { icon: Briefcase, title: 'Experience', description: '2+ years in React.js development' }
+    { icon: FiCode, title: 'Technologies', description: 'React.js, Next.js, TypeScript, Tailwind CSS, Node.js' },
+    { icon: FiBookOpen, title: 'Education', description: 'B.Tech in Computer Science & Engineering' },
+    { icon: FiBriefcase, title: 'Experience', description: '2+ years in React.js development' }
   ];
 
   return (
@@ -158,7 +158,7 @@ const About = ({isDarkMode}) => {
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
               className='px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center gap-2 mx-auto hover:shadow-glow transition-all duration-300'
             >
-              <Download className='w-5 h-5' />
+              <FiDownload className='w-5 h-5' />
               Get In Touch
             </motion.button>
           </div>

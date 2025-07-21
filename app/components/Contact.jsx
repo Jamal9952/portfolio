@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { assets } from '@/assets/assets';
 import React, { useState } from 'react'
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 
 const Contact = () => {
     const [result, setResult] = useState("");
@@ -54,19 +54,19 @@ const Contact = () => {
 
     const contactInfo = [
         {
-            icon: Mail,
+            icon: FiMail,
             title: 'Email',
             value: 'jamal.ahmed@example.com',
             link: 'mailto:jamal.ahmed@example.com'
         },
         {
-            icon: Phone,
+            icon: FiPhone,
             title: 'Phone',
             value: '+92 300 123 4567',
             link: 'tel:+923001234567'
         },
         {
-            icon: MapPin,
+            icon: FiMapPin,
             title: 'Location',
             value: 'Pakistan',
             link: '#'
@@ -228,7 +228,7 @@ const Contact = () => {
                                     </>
                                 ) : (
                                     <>
-                                        <Send className='w-5 h-5' />
+                                        <FiSend className='w-5 h-5' />
                                         Send Message
                                     </>
                                 )}
@@ -246,9 +246,9 @@ const Contact = () => {
                                     }`}
                                 >
                                     {result.includes('successfully') ? (
-                                        <CheckCircle className='w-5 h-5' />
+                                        <FiCheckCircle className='w-5 h-5' />
                                     ) : (
-                                        <AlertCircle className='w-5 h-5' />
+                                        <FiAlertCircle className='w-5 h-5' />
                                     )}
                                     {result}
                                 </motion.div>

@@ -3,7 +3,7 @@ import React from 'react'
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import { motion } from "motion/react"
-import { Download, Mail, Github, Linkedin, ExternalLink } from 'lucide-react'
+import { FiDownload, FiMail, FiGithub, FiLinkedin, FiExternalLink } from 'react-icons/fi'
 
 const Header = ({ isDarkMode }) => {
   const handleResumeDownload = () => {
@@ -128,7 +128,7 @@ CONTACT
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
             className='px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center gap-2 shadow-glow hover:shadow-lg transition-all duration-300'
           >
-            <Mail className='w-5 h-5' />
+            <FiMail className='w-5 h-5' />
             Contact Me
           </motion.button>
 
@@ -138,7 +138,7 @@ CONTACT
             onClick={handleResumeDownload}
             className='px-8 py-4 glass rounded-full flex items-center gap-2 hover:bg-white/20 transition-all duration-300'
           >
-            <Download className='w-5 h-5' />
+            <FiDownload className='w-5 h-5' />
             Download Resume
           </motion.button>
         </motion.div>
@@ -157,7 +157,7 @@ CONTACT
             whileHover={{ scale: 1.1, y: -2 }}
             className='w-12 h-12 glass rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300'
           >
-            <Github className='w-6 h-6' />
+            <FiGithub className='w-6 h-6' />
           </motion.a>
           
           <motion.a
@@ -167,7 +167,7 @@ CONTACT
             whileHover={{ scale: 1.1, y: -2 }}
             className='w-12 h-12 glass rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300'
           >
-            <Linkedin className='w-6 h-6' />
+            <FiLinkedin className='w-6 h-6' />
           </motion.a>
         </motion.div>
 

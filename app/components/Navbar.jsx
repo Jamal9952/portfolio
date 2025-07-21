@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { Sun, Moon, Menu, X, Mail } from 'lucide-react'
+import { FiSun, FiMoon, FiMenu, FiX, FiMail } from 'react-icons/fi'
 
 const Navbar = ({isDarkMode, setIsDarkMode}) => {
     const [isScroll, setIsScroll] = useState(false)
@@ -99,9 +99,9 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                         className='w-10 h-10 glass rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300'
                     >
                         {isDarkMode ? (
-                            <Sun className='w-5 h-5 text-yellow-500' />
+                            <FiSun className='w-5 h-5 text-yellow-500' />
                         ) : (
-                            <Moon className='w-5 h-5 text-gray-700' />
+                            <FiMoon className='w-5 h-5 text-gray-700' />
                         )}
                     </motion.button>
 
@@ -112,7 +112,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <Mail className='w-4 h-4' />
+                        <FiMail className='w-4 h-4' />
                         Contact
                     </motion.a>
 
@@ -123,7 +123,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <Menu className='w-5 h-5 text-gray-700 dark:text-gray-300' />
+                        <FiMenu className='w-5 h-5 text-gray-700 dark:text-gray-300' />
                     </motion.button>
                 </motion.div> 
 
@@ -154,7 +154,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <X className='w-5 h-5 text-gray-700 dark:text-gray-300' />
+                        <FiX className='w-5 h-5 text-gray-700 dark:text-gray-300' />
                     </motion.button>
 
                     {/* Mobile Menu Items */}
@@ -189,7 +189,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <Mail className='w-4 h-4' />
+                            <FiMail className='w-4 h-4' />
                             Get In Touch
                         </motion.a>
                     </motion.div>

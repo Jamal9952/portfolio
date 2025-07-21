@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { assets, workData } from '@/assets/assets';
 import { motion } from 'motion/react';
-import { ExternalLink, Github, Eye } from 'lucide-react';
+import { FiExternalLink, FiGithub, FiEye } from 'react-icons/fi';
 
 const Work = ({isDarkMode}) => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -93,7 +93,7 @@ const Work = ({isDarkMode}) => {
                       whileTap={{ scale: 0.95 }}
                       className='flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm hover:bg-white/30 transition-colors'
                     >
-                      <Eye className='w-4 h-4' />
+                      <FiEye className='w-4 h-4' />
                       View
                     </motion.a>
                     <motion.a
@@ -104,7 +104,7 @@ const Work = ({isDarkMode}) => {
                       whileTap={{ scale: 0.95 }}
                       className='flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-sm hover:shadow-glow transition-all'
                     >
-                      <Github className='w-4 h-4' />
+                      <FiGithub className='w-4 h-4' />
                       Code
                     </motion.a>
                   </div>
@@ -136,7 +136,7 @@ const Work = ({isDarkMode}) => {
             className='inline-flex items-center gap-3 px-8 py-4 glass rounded-full hover:shadow-glow transition-all duration-300'
           >
             <span className='font-semibold'>View More Projects</span>
-            <ExternalLink className='w-5 h-5' />
+            <FiExternalLink className='w-5 h-5' />
           </motion.a>
         </motion.div>
       </div>

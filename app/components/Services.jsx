@@ -2,10 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import { assets, serviceData } from '@/assets/assets'
 import { motion } from 'motion/react'
-import { ArrowRight, Code, Smartphone, Palette, Zap } from 'lucide-react'
+import { FiArrowRight, FiCode, FiSmartphone, FiImage, FiZap } from 'react-icons/fi'
 
 const Services = () => {
-  const serviceIcons = [Code, Smartphone, Palette, Zap];
+  const serviceIcons = [FiCode, FiSmartphone, FiImage, FiZap];
 
   return (
     <motion.div id="services" className='relative w-full px-[8%] py-20 scroll-mt-20 overflow-hidden'>
@@ -82,7 +82,7 @@ const Services = () => {
                     className='inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors'
                   >
                     Learn More
-                    <ArrowRight className='w-4 h-4' />
+                    <FiArrowRight className='w-4 h-4' />
                   </motion.a>
 
                   {/* Hover Effect */}

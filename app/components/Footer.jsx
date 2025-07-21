@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import { motion } from 'motion/react'
-import { Mail, Github, Linkedin, ArrowUp } from 'lucide-react'
+import { FiMail, FiGithub, FiLinkedin, FiArrowUp } from 'react-icons/fi'
 
 const Footer = ({isDarkMode}) => {
   const scrollToTop = () => {
@@ -47,7 +47,7 @@ const Footer = ({isDarkMode}) => {
               whileTap={{ scale: 0.95 }}
               className='flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors'
             >
-              <Mail className='w-5 h-5' />
+              <FiMail className='w-5 h-5' />
               jamalahmed9952@gmail.com
             </motion.a>
           </div>
@@ -62,7 +62,7 @@ const Footer = ({isDarkMode}) => {
               whileTap={{ scale: 0.9 }}
               className='w-12 h-12 glass rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300'
             >
-              <Github className='w-6 h-6' />
+              <FiGithub className='w-6 h-6' />
             </motion.a>
             
             <motion.a
@@ -73,7 +73,7 @@ const Footer = ({isDarkMode}) => {
               whileTap={{ scale: 0.9 }}
               className='w-12 h-12 glass rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300'
             >
-              <Linkedin className='w-6 h-6' />
+              <FiLinkedin className='w-6 h-6' />
             </motion.a>
           </div>
 
@@ -123,7 +123,7 @@ const Footer = ({isDarkMode}) => {
               whileTap={{ scale: 0.9 }}
               className='w-10 h-10 glass rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300'
             >
-              <ArrowUp className='w-5 h-5 text-gray-600 dark:text-gray-300' />
+              <FiArrowUp className='w-5 h-5 text-gray-600 dark:text-gray-300' />
             </motion.button>
           </div>
         </div>
