@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { FiSun, FiMoon, FiMenu, FiX, FiMail } from 'react-icons/fi'
+import Logo from './Logo'
 
 const Navbar = ({isDarkMode, setIsDarkMode}) => {
     const [isScroll, setIsScroll] = useState(false)
@@ -58,11 +59,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <Image 
-                        src={isDarkMode ? assets.logo_dark : assets.logo} 
-                        alt='Jamal Ahmed' 
-                        className='w-28 cursor-pointer'
-                    />
+                    <Logo isDarkMode={isDarkMode} size="md" className="cursor-pointer" />
                 </motion.a>
 
                 {/* Desktop Navigation */}

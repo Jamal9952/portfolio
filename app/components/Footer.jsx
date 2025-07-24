@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import { motion } from 'motion/react'
 import { FiMail, FiGithub, FiLinkedin, FiArrowUp } from 'react-icons/fi'
+import Logo from './Logo'
 
 const Footer = ({isDarkMode}) => {
   const scrollToTop = () => {
@@ -26,12 +27,9 @@ const Footer = ({isDarkMode}) => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              className="flex justify-center"
             >
-              <Image 
-                src={isDarkMode ? assets.logo_dark : assets.logo} 
-                alt='Jamal Ahmed' 
-                className='w-36 mx-auto mb-4'
-              />
+              <Logo isDarkMode={isDarkMode} size="lg" className="mb-4" />
             </motion.div>
             <p className='text-gray-600 dark:text-gray-300 max-w-2xl mx-auto'>
               Passionate React.js developer creating modern, scalable web applications. 

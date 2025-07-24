@@ -56,20 +56,20 @@ const Contact = () => {
         {
             icon: FiMail,
             title: 'Email',
-            value: 'jamal.ahmed@example.com',
-            link: 'mailto:jamal.ahmed@example.com'
+            value: 'jamalahmed9952@gmail.com',
+            link: 'mailto:jamalahmed9952@gmail.com'
         },
         {
             icon: FiPhone,
             title: 'Phone',
-            value: '+92 300 123 4567',
-            link: 'tel:+923001234567'
+            value: '+92323 4455150',
+            link: 'tel:+923234455150'
         },
         {
             icon: FiMapPin,
             title: 'Location',
             value: 'Pakistan',
-            link: '#'
+            link: 'https://maps.google.com/?q=Lahore,Pakistan'
         }
     ];
 
@@ -179,7 +179,7 @@ const Contact = () => {
                                         name='name'
                                         value={formData.name}
                                         onChange={handleInputChange}
-                                        className='w-full p-4 outline-none glass rounded-xl border border-white/20 focus:border-primary/50 transition-colors'
+                                        className='w-full p-4 outline-none glass rounded-xl border border-primary/20 dark:border-white/20 focus:border-primary/50 dark:focus:border-primary/50 transition-colors'
                                     />
                                 </div>
                                 
@@ -189,12 +189,12 @@ const Contact = () => {
                                     </label>
                                     <input 
                                         type='email' 
-                                        placeholder='your.email@example.com' 
+                                        placeholder='Enter your email address' 
                                         required 
                                         name='email'
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        className='w-full p-4 outline-none glass rounded-xl border border-white/20 focus:border-primary/50 transition-colors'
+                                        className='w-full p-4 outline-none glass rounded-xl border border-primary/20 dark:border-white/20 focus:border-primary/50 dark:focus:border-primary/50 transition-colors'
                                     />
                                 </div>
                                 
@@ -209,7 +209,7 @@ const Contact = () => {
                                         name='message'
                                         value={formData.message}
                                         onChange={handleInputChange}
-                                        className='w-full p-4 outline-none glass rounded-xl border border-white/20 focus:border-primary/50 transition-colors resize-none'
+                                        className='w-full p-4 outline-none glass rounded-xl border border-primary/20 dark:border-white/20 focus:border-primary/50 dark:focus:border-primary/50 transition-colors resize-none'
                                     />
                                 </div>
                             </div>

@@ -92,36 +92,6 @@ const Services = () => {
             );
           })}
         </motion.div>
-
-        {/* Additional Info */}
-        <motion.div 
-          className='mt-20 text-center'
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:0.6, delay:1.1}}
-        >
-          <div className='glass rounded-2xl p-8 max-w-4xl mx-auto'>
-            <h3 className='text-2xl font-bold mb-4 gradient-text'>Why Choose Me?</h3>
-            <p className='text-gray-600 dark:text-gray-300 mb-6'>
-              With 2+ years of experience in React.js development, I bring expertise in modern 
-              frontend technologies, clean code practices, and user-centric design principles.
-            </p>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8'>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-primary mb-2'>10+</div>
-                <div className='text-gray-600 dark:text-gray-300'>Projects Completed</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-secondary mb-2'>2+</div>
-                <div className='text-gray-600 dark:text-gray-300'>Years Experience</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-accent mb-2'>100%</div>
-                <div className='text-gray-600 dark:text-gray-300'>Client Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </motion.div>
   )

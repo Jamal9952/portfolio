@@ -7,46 +7,14 @@ import { FiDownload, FiMail, FiGithub, FiLinkedin, FiExternalLink } from 'react-
 
 const Header = ({ isDarkMode }) => {
   const handleResumeDownload = () => {
-    // Create a simple resume content (you can replace this with your actual resume)
-    const resumeContent = `
-Jamal Ahmed
-React.js Developer
-
-EXPERIENCE
-• 2+ years of experience in React.js development
-• Built and maintained 10+ web applications
-• Expertise in modern frontend technologies
-
-SKILLS
-• React.js, Next.js, TypeScript
-• Tailwind CSS, Material-UI
-• Node.js, Firebase, MongoDB
-• Git, GitHub, VS Code
-
-EDUCATION
-• B.Tech in Computer Science & Engineering
-
-PROJECTS
-• E-Commerce Platform (React, Next.js, Stripe)
-• Task Management App (React, Firebase)
-• Weather Dashboard (React, OpenWeather API)
-• Social Media Dashboard (React, Node.js, MongoDB)
-
-CONTACT
-• Email: jamal.ahmed@example.com
-• GitHub: github.com/jamalahmed
-• LinkedIn: linkedin.com/in/jamalahmed
-    `;
-    
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Jamal_Ahmed_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    // Create a link to download the PDF resume
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Jamal_Ahmed_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -151,7 +119,7 @@ CONTACT
           transition={{duration: 0.6, delay: 1.2}}
         >
           <motion.a
-            href='https://github.com'
+            href='https://github.com/Jamal9952'
             target='_blank'
             rel='noopener noreferrer'
             whileHover={{ scale: 1.1, y: -2 }}
@@ -161,7 +129,7 @@ CONTACT
           </motion.a>
           
           <motion.a
-            href='https://linkedin.com'
+            href='https://www.linkedin.com/in/jamal-ahmed-b25616189/'
             target='_blank'
             rel='noopener noreferrer'
             whileHover={{ scale: 1.1, y: -2 }}

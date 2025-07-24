@@ -2,12 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import { assets, skills } from '@/assets/assets'
 import { motion } from "motion/react"
-import { FiCode, FiBookOpen, FiBriefcase, FiStar, FiDownload } from 'react-icons/fi'
+import { FiCode, FiBookOpen, FiBriefcase, FiDownload } from 'react-icons/fi'
 
 const About = ({isDarkMode}) => {
   const infoItems = [
-    { icon: FiCode, title: 'Technologies', description: 'React.js, Next.js, TypeScript, Tailwind CSS, Node.js' },
-    { icon: FiBookOpen, title: 'Education', description: 'B.Tech in Computer Science & Engineering' },
+    { icon: FiCode, title: 'Technologies', description: 'React.js, Node.js, JavaScript, TypeScript, CoffeeScript, React Native, MongoDB, PostgreSQL, Express.js, Firebase, MySQL, Redux, Next.js, Tailwind CSS' },
+    { icon: FiBookOpen, title: 'Education', description: 'Masters in Computer Science' },
     { icon: FiBriefcase, title: 'Experience', description: '2+ years in React.js development' }
   ];
 

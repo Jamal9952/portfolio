@@ -29,6 +29,10 @@ export default {
         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
         'glassDark': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
         'glow': '0 0 20px rgba(99, 102, 241, 0.5)',
+        'glass-light': '0 8px 32px 0 rgba(99, 102, 241, 0.15), 0 0 0 1px rgba(99, 102, 241, 0.1)',
+        'glow-light': '0 0 20px rgba(99, 102, 241, 0.3), 0 0 40px rgba(139, 92, 246, 0.2)',
+        'border-light': '0 0 0 1px rgba(99, 102, 241, 0.1)',
+        'border-dark': '0 0 0 1px rgba(255, 255, 255, 0.1)',
       },
       gridTemplateColumns:{
         'auto': 'repeat(auto-fit, minmax(300px, 1fr))'
