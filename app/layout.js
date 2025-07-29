@@ -17,15 +17,15 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.svg?v=3',
+        url: '/favicon.svg?v=4',
         type: 'image/svg+xml',
         sizes: 'any',
       },
     ],
-    shortcut: '/favicon.svg?v=3',
+    shortcut: '/favicon.svg?v=4',
     apple: [
       {
-        url: '/favicon.svg?v=3',
+        url: '/favicon.svg?v=4',
         type: 'image/svg+xml',
       },
     ],
@@ -63,10 +63,10 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#6366f1" />
         <link rel="canonical" href="https://portfolio-jamal9952s-projects.vercel.app" />
-        <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.svg?v=3" />
-        <link rel="shortcut icon" href="/favicon.svg?v=3" />
-        <link rel="apple-touch-icon" href="/favicon.svg?v=3" />
+        <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.svg?v=4" />
+        <link rel="shortcut icon" href="/favicon.svg?v=4" />
+        <link rel="apple-touch-icon" href="/favicon.svg?v=4" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#6366f1" />
         <meta name="msapplication-config" content="/favicon.svg?v=2" />
