@@ -1,16 +1,19 @@
-import user_image from './user-image.png';
+import user_image from './user-image.jpg';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
-import profile_img from './profile-img.png';
+import profile_img from './user-image.jpg';
 import hand_icon from './hand-icon.png';
 import web_icon from './web-icon.png';
 import mobile_icon from './mobile-icon.png';
 import ui_icon from './ui-icon.png';
 import graphics_icon from './graphics-icon.png';
+import clara_image from './clara.png';
+import envoy_image from './envoy.png';
+import kinderdorf_image from './kinderdorf.png';
 
 export const assets = {
     user_image,
@@ -25,28 +28,31 @@ export const assets = {
     web_icon,
     mobile_icon,
     ui_icon,
-    graphics_icon
+    graphics_icon,
+    clara_image,
+    envoy_image,
+    kinderdorf_image
 };
 
 export const workData = [
     {
         title: 'Envoy',
         description: 'A comprehensive healthcare system designed specifically for US pharmacies, featuring advanced patient assessment capabilities and multi-language support. Built with a robust architecture using CoffeeScript, Node.js, and Python to handle complex pharmaceutical workflows and integrate seamlessly with existing pharmacy management systems.',
-        bgImage: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop',
+        bgImage: assets.envoy_image,
         link: '#',
         technologies: ['CoffeeScript', 'Node.js', 'Python', 'React', 'Express.js', 'MongoDB', 'Healthcare APIs']
     },
     {
         title: 'ClaraRx',
         description: 'A cutting-edge billing and dispensing platform revolutionizing US pharmacy operations. Recently launched with tremendous market potential, ClaraRx integrates with critical government software including NCPDP (National Council for Prescription Drug Programs) and provides a unified platform for all pharmacy operations, from prescription processing to insurance claims management.',
-        bgImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
+        bgImage: assets.clara_image,
         link: '#',
         technologies: ['React', 'Node.js', 'MongoDB', 'NCPDP Integration', 'Healthcare APIs', 'Payment Processing', 'Express.js']
     },
     {
         title: 'Kinder Dorf - Kids Clothing Store',
         description: 'An e-commerce platform for children\'s clothing featuring modern design, secure payment processing, and comprehensive inventory management. The platform includes user authentication, shopping cart functionality, and responsive design for optimal mobile experience.',
-        bgImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop',
+        bgImage: assets.kinderdorf_image,
         link: '#',
         technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Stripe', 'Tailwind CSS', 'Redux']
     }
@@ -60,9 +66,9 @@ export const serviceData = [
         link: '#services' 
     },
     { 
-        icon: assets.mobile_icon, 
-        title: 'Mobile Development', 
-        description: 'Creating cross-platform mobile applications with React Native and progressive web apps.', 
+        icon: assets.graphics_icon, 
+        title: 'Frontend Optimization', 
+        description: 'Optimizing performance, accessibility, and SEO for better user engagement and search rankings.', 
         link: '#services' 
     },
     { 
@@ -72,11 +78,11 @@ export const serviceData = [
         link: '#services' 
     },
     { 
-        icon: assets.graphics_icon, 
-        title: 'Frontend Optimization', 
-        description: 'Optimizing performance, accessibility, and SEO for better user engagement and search rankings.', 
+        icon: assets.mobile_icon, 
+        title: 'Mobile Development', 
+        description: 'Creating cross-platform mobile applications with React Native and progressive web apps.', 
         link: '#services' 
-    },
+    }
 ];
 
 export const infoList = [

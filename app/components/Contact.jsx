@@ -83,7 +83,7 @@ const Contact = () => {
                     className='text-center mb-2 text-lg font-Ovo text-primary'
                     initial={{opacity:0, y:-20}}
                     whileInView={{opacity:1, y:0}}
-                    transition={{duration:0.5, delay:0.3}}
+                    transition={{duration:0.3, delay:0.1}}
                 >
                     Connect with me
                 </motion.h4>
@@ -91,7 +91,7 @@ const Contact = () => {
                     className='text-center text-5xl font-Ovo font-bold'
                     initial={{opacity:0, y:-20}}
                     whileInView={{opacity:1, y:0}}
-                    transition={{duration:0.5, delay:0.5}}
+                    transition={{duration:0.3, delay:0.2}}
                 >
                     <span className='gradient-text'>Get in Touch</span>
                 </motion.h2>
@@ -99,13 +99,18 @@ const Contact = () => {
                     className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300'
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
-                    transition={{delay:0.7,duration:0.5}}
+                    transition={{delay:0.3,duration:0.3}}
                 >
                     I'd love to hear from you! Whether you have a project in mind, want to collaborate, 
                     or just want to say hello, feel free to reach out.
                 </motion.p>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto'>
+                <motion.div 
+                    className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto'
+                    initial={{opacity:0}}
+                    whileInView={{opacity:1}}
+                    transition={{duration:0.4, delay:0.4}}
+                >
                     {/* Contact Info */}
                     <motion.div
                         initial={{opacity:0, x:-50}}
@@ -163,7 +168,7 @@ const Contact = () => {
                             className='glass rounded-2xl p-8'
                             initial={{opacity:0}}
                             whileInView={{opacity:1}}
-                            transition={{delay:0.9,duration:0.5}}
+                            transition={{duration:0.4, delay:0.4}}
                         >
                             <h3 className='text-2xl font-bold mb-8 gradient-text'>Send Message</h3>
                             
@@ -255,7 +260,7 @@ const Contact = () => {
                             )}
                         </motion.form>
                     </motion.div>
-                </div>
+                </motion.div>
             </div>
         </motion.div>
     )

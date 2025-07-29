@@ -32,7 +32,7 @@ const Header = ({ isDarkMode }) => {
         <motion.div 
           initial={{scale: 0, opacity: 0}}
           animate={{scale: 1, opacity: 1}}
-          transition={{duration: 0.8, type: 'spring', stiffness: 100}}
+          transition={{duration: 0.5, type: 'spring', stiffness: 100}}
           className='relative'
         >
           <div className='relative w-40 h-40 rounded-full overflow-hidden glass shadow-glass'>
@@ -54,7 +54,7 @@ const Header = ({ isDarkMode }) => {
           className='flex items-center gap-3 text-xl md:text-2xl font-Ovo'
           initial={{y: -20, opacity: 0}}
           animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.6, delay: 0.3}}
+          transition={{duration: 0.4, delay: 0.1}}
         >
           <span className='gradient-text font-semibold'>Hi, I'm Jamal Ahmed</span>
         </motion.h3>
@@ -64,7 +64,7 @@ const Header = ({ isDarkMode }) => {
           className='text-4xl sm:text-6xl lg:text-7xl font-Ovo font-bold'
           initial={{y: -30, opacity: 0}}
           animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.8, delay: 0.5}}
+          transition={{duration: 0.5, delay: 0.2}}
         >
           <span className='gradient-text'>React.js</span>
           <br />
@@ -76,7 +76,7 @@ const Header = ({ isDarkMode }) => {
           className='max-w-2xl mx-auto text-lg font-Ovo text-gray-600 dark:text-gray-300'
           initial={{opacity: 0}}
           animate={{opacity: 1}}
-          transition={{duration: 0.6, delay: 0.7}}
+          transition={{duration: 0.4, delay: 0.3}}
         >
           Passionate React.js developer with 2+ years of experience creating modern, 
           responsive web applications. Specialized in building scalable frontend solutions 
@@ -88,7 +88,7 @@ const Header = ({ isDarkMode }) => {
           className='flex flex-col sm:flex-row items-center gap-4 mt-8'
           initial={{y: 30, opacity: 0}}
           animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.6, delay: 1}}
+          transition={{duration: 0.4, delay: 0.4}}
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -116,7 +116,7 @@ const Header = ({ isDarkMode }) => {
           className='flex items-center gap-4 mt-8'
           initial={{y: 30, opacity: 0}}
           animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.6, delay: 1.2}}
+          transition={{duration: 0.4, delay: 0.5}}
         >
           <motion.a
             href='https://github.com/Jamal9952'
@@ -144,7 +144,7 @@ const Header = ({ isDarkMode }) => {
           className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
           initial={{opacity: 0}}
           animate={{opacity: 1}}
-          transition={{duration: 0.6, delay: 1.5}}
+          transition={{duration: 0.4, delay: 0.6}}
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

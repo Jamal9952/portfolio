@@ -1,15 +1,65 @@
 import React from 'react'
 import Image from 'next/image'
-import { assets, skills } from '@/assets/assets'
-import { motion } from "motion/react"
-import { FiCode, FiBookOpen, FiBriefcase, FiDownload } from 'react-icons/fi'
+import { assets, infoList, skills } from '@/assets/assets'
+import { motion } from 'motion/react'
+import { FiDownload, FiCode, FiUsers, FiAward, FiTrendingUp } from 'react-icons/fi'
+import { 
+  SiReact, 
+  SiNodedotjs, 
+  SiJavascript, 
+  SiTypescript, 
+  SiCoffeescript,
+  SiReactrouter,
+  SiMongodb,
+  SiPostgresql,
+  SiExpress,
+  SiFirebase,
+  SiMysql,
+  SiRedux,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiGit,
+  SiDocker,
+  SiFigma,
+  SiVercel,
+  SiNetlify,
+  SiJest
+} from 'react-icons/si'
 
 const About = ({isDarkMode}) => {
   const infoItems = [
     { icon: FiCode, title: 'Technologies', description: 'React.js, Node.js, JavaScript, TypeScript, CoffeeScript, React Native, MongoDB, PostgreSQL, Express.js, Firebase, MySQL, Redux, Next.js, Tailwind CSS' },
-    { icon: FiBookOpen, title: 'Education', description: 'Masters in Computer Science' },
-    { icon: FiBriefcase, title: 'Experience', description: '2+ years in React.js development' }
+    { icon: FiUsers, title: 'Experience', description: '2+ years in React.js development' },
+    { icon: FiAward, title: 'Education', description: 'Masters in Computer Science' },
+    { icon: FiTrendingUp, title: 'Projects', description: 'Healthcare systems, E-commerce platforms, Mobile apps' }
   ];
+
+  // Map skills to their respective icons
+  const getSkillIcon = (skillName) => {
+    const iconMap = {
+      'React.js': SiReact,
+      'Node.js': SiNodedotjs,
+      'JavaScript': SiJavascript,
+      'TypeScript': SiTypescript,
+      'CoffeeScript': SiCoffeescript,
+      'React Native': SiReactrouter,
+      'MongoDB': SiMongodb,
+      'PostgreSQL': SiPostgresql,
+      'Express.js': SiExpress,
+      'Firebase': SiFirebase,
+      'MySQL': SiMysql,
+      'Redux': SiRedux,
+      'Next.js': SiNextdotjs,
+      'Tailwind CSS': SiTailwindcss,
+      'Git': SiGit,
+      'Docker': SiDocker,
+      'Figma': SiFigma,
+      'Vercel': SiVercel,
+      'Netlify': SiNetlify,
+      'Jest': SiJest
+    };
+    return iconMap[skillName] || FiCode; // Default to FiCode if no icon found
+  };
 
   return (
     <motion.div id="about" className='relative w-full px-[8%] py-20 scroll-mt-20 overflow-hidden'>
@@ -21,7 +71,7 @@ const About = ({isDarkMode}) => {
           className='text-center mb-2 text-lg font-Ovo text-primary'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.5, delay:0.3}}
+          transition={{duration:0.3, delay:0.1}}
         >
           Introduction
         </motion.h4>
@@ -29,7 +79,7 @@ const About = ({isDarkMode}) => {
           className='text-center text-5xl font-Ovo font-bold'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.5, delay:0.5}}
+          transition={{duration:0.3, delay:0.2}}
         >
           <span className='gradient-text'>About Me</span>
         </motion.h2>
@@ -38,14 +88,14 @@ const About = ({isDarkMode}) => {
           className='flex w-full flex-col lg:flex-row items-center gap-16 my-20' 
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.8}}
+          transition={{duration:0.5}}
         >
           {/* Profile Image */}
           <motion.div 
             className='relative w-80 h-80'
             initial={{opacity:0, scale:0.9}}
             whileInView={{opacity:1, scale:1}}
-            transition={{duration:0.6}}
+            transition={{duration:0.4}}
           >
             <div className='relative w-full h-full rounded-3xl overflow-hidden glass shadow-glass'>
               <Image 
@@ -65,7 +115,7 @@ const About = ({isDarkMode}) => {
             className='flex-1'
             initial={{opacity:0}}
             whileInView={{opacity:1}}
-            transition={{duration:0.8, delay:0.6}}
+            transition={{duration:0.5, delay:0.3}}
           >
             <div className='glass rounded-2xl p-8 mb-8'>
               <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300 font-Ovo mb-6'> 
@@ -82,17 +132,17 @@ const About = ({isDarkMode}) => {
 
             {/* Info Cards */}
             <motion.div 
-              className='grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12'
+              className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-8'
               initial={{opacity:0}}
               whileInView={{opacity:1}}
-              transition={{duration:0.8, delay:1}}
+              transition={{duration:0.5, delay:0.5}}
             >
               {infoItems.map((item, index) => (
                 <motion.div 
                   key={item.title} 
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
                   whileHover={{ y: -5 }}
                   className='glass rounded-xl p-6 hover:shadow-glow transition-all duration-300'
                 >
@@ -109,32 +159,44 @@ const About = ({isDarkMode}) => {
             <motion.div
               initial={{opacity:0}}
               whileInView={{opacity:1}}
-              transition={{duration:0.6, delay:1.3}}
+              transition={{duration:0.3, delay:0.2}}
             >
               <h3 className='text-2xl font-bold mb-6 gradient-text'>Technical Skills</h3>
-              <div className='space-y-4'>
-                {skills.map((skill, index) => (
-                  <motion.div 
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 1.5 + index * 0.1 }}
-                    className='glass rounded-xl p-4'
-                  >
-                    <div className='flex justify-between items-center mb-2'>
-                      <span className='font-semibold text-gray-800 dark:text-white'>{skill.name}</span>
-                      <span className='text-sm text-primary font-bold'>{skill.level}%</span>
-                    </div>
-                    <div className='w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2'>
-                      <motion.div 
-                        className='bg-gradient-to-r from-primary to-secondary h-2 rounded-full'
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: 1.8 + index * 0.1 }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
+              <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                {skills.map((skill, index) => {
+                  const SkillIcon = getSkillIcon(skill.name);
+                  return (
+                    <motion.div 
+                      key={skill.name} 
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.3, 
+                        delay: 0.3 + index * 0.02,
+                        hover: { duration: 0.1 }
+                      }}
+                      whileHover={{ y: -5, scale: 1.02 }}
+                      className='glass rounded-xl p-4 text-center hover:shadow-glow'
+                    >
+                      <div className='w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-3'>
+                        <SkillIcon className='w-6 h-6 text-white' />
+                      </div>
+                      <h4 className='font-semibold text-gray-800 dark:text-white text-sm'>{skill.name}</h4>
+                      <div className='flex justify-center mt-2'>
+                        {[...Array(5)].map((_, i) => (
+                          <div 
+                            key={i}
+                            className={`w-1 h-1 rounded-full mx-0.5 ${
+                              i < Math.floor(skill.level / 20) 
+                                ? 'bg-gradient-to-r from-primary to-secondary' 
+                                : 'bg-gray-300 dark:bg-gray-600'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
           </motion.div>
@@ -145,7 +207,7 @@ const About = ({isDarkMode}) => {
           className='text-center mt-16'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.6, delay:1.8}}
+          transition={{duration:0.4, delay:1.0}}
         >
           <div className='glass rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold mb-4 gradient-text'>Ready to Work Together?</h3>

@@ -51,7 +51,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 }`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.4 }}
             >
                 {/* Logo */}
                 <motion.a 
@@ -67,7 +67,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                     className='hidden md:flex items-center gap-6 lg:gap-8 glass rounded-full px-8 py-3 shadow-glass'
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
                 >
                     {navItems.map((item, index) => (
                         <motion.li key={item.href}>
@@ -86,7 +86,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                     className='flex items-center gap-4'
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
                 >
                     {/* Theme Toggle */}
                     <motion.button 
@@ -160,7 +160,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                             key={item.href}
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                            transition={{ duration: 0.2, delay: index * 0.05 }}
                         >
                             <a 
                                 className='font-Ovo text-lg text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300 block py-2' 
@@ -176,7 +176,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
+                        transition={{ duration: 0.2, delay: navItems.length * 0.05 }}
                         className='mt-8'
                     >
                         <motion.a 

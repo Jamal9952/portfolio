@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { assets, workData } from '@/assets/assets';
 import { motion } from 'motion/react';
-import { FiExternalLink, FiGithub, FiEye } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 
 const Work = ({isDarkMode}) => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -17,7 +17,7 @@ const Work = ({isDarkMode}) => {
           className='text-center mb-2 text-lg font-Ovo text-primary'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.5, delay:0.3}}
+          transition={{duration:0.3, delay:0.1}}
         >
           My Portfolio
         </motion.h4>
@@ -25,7 +25,7 @@ const Work = ({isDarkMode}) => {
           className='text-center text-5xl font-Ovo font-bold'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.5, delay:0.5}}
+          transition={{duration:0.3, delay:0.2}}
         >
           <span className='gradient-text'>Latest Projects</span>
         </motion.h2>
@@ -33,7 +33,7 @@ const Work = ({isDarkMode}) => {
           className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.5,delay:0.7}}
+          transition={{duration:0.3,delay:0.3}}
         >
           Explore a collection of my recent projects, showcasing modern web development 
           techniques and innovative solutions for real-world applications.
@@ -45,7 +45,7 @@ const Work = ({isDarkMode}) => {
               key={index} 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}
             >
               {/* Project Image */}
@@ -76,32 +76,6 @@ const Work = ({isDarkMode}) => {
                       </span>
                     ))}
                   </div>
-                  
-                  {/* Action Buttons */}
-                  <div className='flex gap-3'>
-                    <motion.a
-                      href={project.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className='flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm hover:bg-white/30 transition-colors'
-                    >
-                      <FiEye className='w-4 h-4' />
-                      View
-                    </motion.a>
-                    <motion.a
-                      href='https://github.com/Jamal9952'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className='flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-full text-sm hover:shadow-glow transition-all'
-                    >
-                      <FiGithub className='w-4 h-4' />
-                      Code
-                    </motion.a>
-                  </div>
                 </div>
               </motion.div>
               
@@ -111,7 +85,7 @@ const Work = ({isDarkMode}) => {
                   className='text-3xl font-bold text-gray-800 dark:text-white'
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 + 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.1 }}
                 >
                   {project.title}
                 </motion.h3>
@@ -120,7 +94,7 @@ const Work = ({isDarkMode}) => {
                   className='text-lg text-gray-600 dark:text-gray-300 leading-relaxed'
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
                 >
                   {project.description}
                 </motion.p>
@@ -130,7 +104,7 @@ const Work = ({isDarkMode}) => {
                   className='flex flex-wrap gap-2'
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 + 0.4 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
                 >
                   {project.technologies.map((tech, techIndex) => (
                     <span 
@@ -151,7 +125,7 @@ const Work = ({isDarkMode}) => {
           className='text-center mt-20'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.5,delay:1.1}}
+          transition={{duration:0.3,delay:0.5}}
         >
           <div className='glass rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold mb-4 gradient-text'>Ready for More Projects!</h3>

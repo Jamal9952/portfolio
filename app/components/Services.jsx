@@ -17,7 +17,7 @@ const Services = () => {
           className='text-center mb-2 text-lg font-Ovo text-primary'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.5, delay:0.3}}
+          transition={{duration:0.3, delay:0.1}}
         >
           What I Offer
         </motion.h4>
@@ -25,7 +25,7 @@ const Services = () => {
           className='text-center text-5xl font-Ovo font-bold'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.5, delay:0.5}}
+          transition={{duration:0.3, delay:0.2}}
         >
           <span className='gradient-text'>My Services</span>
         </motion.h2>
@@ -33,7 +33,7 @@ const Services = () => {
           className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.5, delay:0.7}}
+          transition={{duration:0.3, delay:0.3}}
         >
           Specialized in modern web development with a focus on React.js ecosystem. 
           Delivering high-quality, scalable solutions that drive business growth.
@@ -43,7 +43,7 @@ const Services = () => {
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-10'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.6, delay:0.9}}
+          transition={{duration:0.4, delay:0.4}}
         >
           {serviceData.map((service, index) => {
             const IconComponent = serviceIcons[index];
@@ -52,7 +52,7 @@ const Services = () => {
                 key={service.title} 
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 whileHover={{ y: -10 }}
                 className='group relative'
               >
