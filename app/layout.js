@@ -17,21 +17,28 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.svg',
+        url: '/favicon.svg?v=2',
         type: 'image/svg+xml',
+        sizes: 'any',
       },
       {
-        url: '/favicon.ico',
+        url: '/favicon.ico?v=2',
         type: 'image/x-icon',
+        sizes: '32x32',
       },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/favicon.svg',
+    shortcut: '/favicon.ico?v=2',
+    apple: [
+      {
+        url: '/favicon.svg?v=2',
+        type: 'image/svg+xml',
+      },
+    ],
   },
   openGraph: {
     title: 'Portfolio - Jamal Ahmed',
     description: 'React.js Developer Portfolio - Jamal Ahmed. Experienced in healthcare systems, e-commerce platforms, and modern web applications.',
-    url: 'https://your-portfolio-url.vercel.app',
+    url: 'https://portfolio-jamal9952s-projects.vercel.app',
     siteName: 'Jamal Ahmed Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -60,10 +67,14 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#6366f1" />
-        <link rel="canonical" href="https://your-portfolio-url.vercel.app" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://portfolio-jamal9952s-projects.vercel.app" />
+        <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico?v=2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=2" />
+        <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileColor" content="#6366f1" />
+        <meta name="msapplication-config" content="/favicon.svg?v=2" />
       </head>
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
