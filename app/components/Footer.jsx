@@ -15,6 +15,7 @@ const Footer = ({isDarkMode}) => {
       className='relative mt-20 overflow-hidden'
       initial={{opacity:0}}
       whileInView={{opacity:1}}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{duration:0.4}}
     >
       {/* Background gradient */}

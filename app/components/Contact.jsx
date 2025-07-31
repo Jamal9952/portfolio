@@ -83,6 +83,7 @@ const Contact = () => {
                     className='text-center mb-2 text-lg font-Ovo text-primary'
                     initial={{opacity:0, y:-20}}
                     whileInView={{opacity:1, y:0}}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{duration:0.3, delay:0.1}}
                 >
                     Connect with me
@@ -91,6 +92,7 @@ const Contact = () => {
                     className='text-center text-5xl font-Ovo font-bold'
                     initial={{opacity:0, y:-20}}
                     whileInView={{opacity:1, y:0}}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{duration:0.3, delay:0.2}}
                 >
                     <span className='gradient-text'>Get in Touch</span>
@@ -99,6 +101,7 @@ const Contact = () => {
                     className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300'
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{delay:0.3,duration:0.3}}
                 >
                     I'd love to hear from you! Whether you have a project in mind, want to collaborate, 
@@ -109,12 +112,14 @@ const Contact = () => {
                     className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto'
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
+                    viewport={{ once: true, amount: 0.2 }}
                     transition={{duration:0.4, delay:0.4}}
                 >
                     {/* Contact Info */}
                     <motion.div
                         initial={{opacity:0, x:-50}}
                         whileInView={{opacity:1, x:0}}
+                        viewport={{ once: true, amount: 0.3 }}
                         transition={{duration:0.6, delay:0.8}}
                     >
                         <h3 className='text-2xl font-bold mb-8 gradient-text'>Let's Connect</h3>
@@ -125,6 +130,7 @@ const Contact = () => {
                                     href={info.link}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.3 }}
                                     transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                                     whileHover={{ x: 10 }}
                                     className='flex items-center gap-4 glass rounded-xl p-6 hover:shadow-glow transition-all duration-300'
@@ -145,6 +151,7 @@ const Contact = () => {
                             className='mt-12 glass rounded-2xl p-8'
                             initial={{opacity:0}}
                             whileInView={{opacity:1}}
+                            viewport={{ once: true, amount: 0.3 }}
                             transition={{duration:0.6, delay:1.4}}
                         >
                             <h4 className='text-xl font-bold mb-4 text-gray-800 dark:text-white'>Available for:</h4>
@@ -161,6 +168,7 @@ const Contact = () => {
                     <motion.div
                         initial={{opacity:0, x:50}}
                         whileInView={{opacity:1, x:0}}
+                        viewport={{ once: true, amount: 0.3 }}
                         transition={{duration:0.6, delay:0.8}}
                     >
                         <motion.form 
@@ -168,6 +176,7 @@ const Contact = () => {
                             className='glass rounded-2xl p-8'
                             initial={{opacity:0}}
                             whileInView={{opacity:1}}
+                            viewport={{ once: true, amount: 0.3 }}
                             transition={{duration:0.4, delay:0.4}}
                         >
                             <h3 className='text-2xl font-bold mb-8 gradient-text'>Send Message</h3>

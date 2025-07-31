@@ -45,6 +45,7 @@ const Work = ({isDarkMode}) => {
               key={index} 
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}
             >
@@ -52,6 +53,7 @@ const Work = ({isDarkMode}) => {
               <motion.div 
                 className='relative w-full lg:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden glass shadow-glass group'
                 whileHover={{ y: -10 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.3 }}
               >
                 <Image 
