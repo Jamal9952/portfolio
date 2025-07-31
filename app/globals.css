@@ -106,9 +106,27 @@
   }
 }
 
-/* Smooth transitions */
-* {
+/* Smooth transitions for specific elements */
+button, a, input, textarea, select {
   transition: all 0.2s ease;
+}
+
+/* Prevent transition conflicts with Framer Motion */
+[data-framer-motion] {
+  transition: none !important;
+}
+
+/* Ensure smooth rendering for animations */
+.motion-element {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize glass morphism for better performance */
+.glass {
+  transform: translateZ(0);
+  will-change: backdrop-filter;
 }
 
 /* Selection styling */

@@ -13,27 +13,30 @@ const Work = ({isDarkMode}) => {
       <div className='absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5'></div>
       
       <div className='relative z-10'>
-        <motion.h4 
-          className='text-center mb-2 text-lg font-Ovo text-primary'
+        <motion.h4
+          className='text-center mb-2 text-lg font-Ovo text-primary motion-element'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.3, delay:0.1}}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{duration:0.5, delay:0.1, ease: "easeOut"}}
         >
           My Portfolio
         </motion.h4>
-        <motion.h2 
-          className='text-center text-5xl font-Ovo font-bold'
+        <motion.h2
+          className='text-center text-5xl font-Ovo font-bold motion-element'
           initial={{opacity:0, y:-20}}
           whileInView={{opacity:1, y:0}}
-          transition={{duration:0.3, delay:0.2}}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{duration:0.5, delay:0.2, ease: "easeOut"}}
         >
           <span className='gradient-text'>Latest Projects</span>
         </motion.h2>
-        <motion.p 
-          className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300'
+        <motion.p
+          className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300 motion-element'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.3,delay:0.3}}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{duration:0.5, delay:0.3, ease: "easeOut"}}
         >
           Explore a collection of my recent projects, showcasing modern web development 
           techniques and innovative solutions for real-world applications.
@@ -41,20 +44,19 @@ const Work = ({isDarkMode}) => {
 
         <div className='space-y-20'>
           {workData.map((project, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center motion-element`}
             >
               {/* Project Image */}
-              <motion.div 
-                className='relative w-full lg:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden glass shadow-glass group'
+              <motion.div
+                className='relative w-full lg:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden glass shadow-glass group motion-element'
                 whileHover={{ y: -10 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <Image 
                   src={project.bgImage} 
@@ -83,30 +85,33 @@ const Work = ({isDarkMode}) => {
               
               {/* Project Description */}
               <div className='w-full lg:w-1/2 space-y-6'>
-                <motion.h3 
-                  className='text-3xl font-bold text-gray-800 dark:text-white'
+                <motion.h3
+                  className='text-3xl font-bold text-gray-800 dark:text-white motion-element'
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 + 0.1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.15 + 0.2, ease: "easeOut" }}
                 >
                   {project.title}
                 </motion.h3>
-                
-                <motion.p 
-                  className='text-lg text-gray-600 dark:text-gray-300 leading-relaxed'
+
+                <motion.p
+                  className='text-lg text-gray-600 dark:text-gray-300 leading-relaxed motion-element'
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.15 + 0.3, ease: "easeOut" }}
                 >
                   {project.description}
                 </motion.p>
-                
+
                 {/* Technologies list */}
-                <motion.div 
-                  className='flex flex-wrap gap-2'
+                <motion.div
+                  className='flex flex-wrap gap-2 motion-element'
                   initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.15 + 0.4, ease: "easeOut" }}
                 >
                   {project.technologies.map((tech, techIndex) => (
                     <span 
@@ -123,11 +128,12 @@ const Work = ({isDarkMode}) => {
         </div>
 
         {/* Friendly Note */}
-        <motion.div 
-          className='text-center mt-20'
+        <motion.div
+          className='text-center mt-20 motion-element'
           initial={{opacity:0}}
           whileInView={{opacity:1}}
-          transition={{duration:0.3,delay:0.5}}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{duration:0.5, delay:0.3, ease: "easeOut"}}
         >
           <div className='glass rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold mb-4 gradient-text'>Ready for More Projects!</h3>

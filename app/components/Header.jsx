@@ -29,11 +29,11 @@ const Header = ({ isDarkMode }) => {
       
       <div className='relative z-10 w-11/12 max-w-4xl text-center mx-auto flex flex-col items-center justify-center gap-8'>
         {/* Profile Image with Glass Effect */}
-        <motion.div 
+        <motion.div
           initial={{scale: 0, opacity: 0}}
           animate={{scale: 1, opacity: 1}}
-          transition={{duration: 0.5, type: 'spring', stiffness: 100}}
-          className='relative'
+          transition={{duration: 0.6, type: 'spring', stiffness: 100, ease: "easeOut"}}
+          className='relative motion-element'
         >
           <div className='relative w-40 h-40 rounded-full overflow-hidden glass shadow-glass'>
             <Image 
@@ -50,21 +50,21 @@ const Header = ({ isDarkMode }) => {
         </motion.div>
 
         {/* Greeting */}
-        <motion.h3 
-          className='flex items-center gap-3 text-xl md:text-2xl font-Ovo'
+        <motion.h3
+          className='flex items-center gap-3 text-xl md:text-2xl font-Ovo motion-element'
           initial={{y: -20, opacity: 0}}
           animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.4, delay: 0.1}}
+          transition={{duration: 0.5, delay: 0.2, ease: "easeOut"}}
         >
           <span className='gradient-text font-semibold'>Hi, I'm Jamal Ahmed</span>
         </motion.h3>
 
         {/* Main Title */}
-        <motion.h1 
-          className='text-4xl sm:text-6xl lg:text-7xl font-Ovo font-bold'
+        <motion.h1
+          className='text-4xl sm:text-6xl lg:text-7xl font-Ovo font-bold motion-element'
           initial={{y: -30, opacity: 0}}
           animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.5, delay: 0.2}}
+          transition={{duration: 0.6, delay: 0.3, ease: "easeOut"}}
         >
           <span className='gradient-text'>React.js</span>
           <br />
@@ -72,11 +72,11 @@ const Header = ({ isDarkMode }) => {
         </motion.h1>
 
         {/* Description */}
-        <motion.p 
-          className='max-w-2xl mx-auto text-lg font-Ovo text-gray-600 dark:text-gray-300'
+        <motion.p
+          className='max-w-2xl mx-auto text-lg font-Ovo text-gray-600 dark:text-gray-300 motion-element'
           initial={{opacity: 0}}
           animate={{opacity: 1}}
-          transition={{duration: 0.4, delay: 0.3}}
+          transition={{duration: 0.5, delay: 0.4, ease: "easeOut"}}
         >
           Passionate React.js developer with 2+ years of experience creating modern, 
           responsive web applications. Specialized in building scalable frontend solutions 
