@@ -79,48 +79,49 @@ const Contact = () => {
             <div className='absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5'></div>
             
             <div className='relative z-10'>
-                <motion.h4 
-                    className='text-center mb-2 text-lg font-Ovo text-primary'
+                <motion.h4
+                    className='text-center mb-2 text-lg font-Ovo text-primary motion-element'
                     initial={{opacity:0, y:-20}}
                     whileInView={{opacity:1, y:0}}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{duration:0.3, delay:0.1}}
+                    transition={{duration:0.5, delay:0.1, ease: "easeOut"}}
                 >
                     Connect with me
                 </motion.h4>
-                <motion.h2 
-                    className='text-center text-5xl font-Ovo font-bold'
+                <motion.h2
+                    className='text-center text-5xl font-Ovo font-bold motion-element'
                     initial={{opacity:0, y:-20}}
                     whileInView={{opacity:1, y:0}}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{duration:0.3, delay:0.2}}
+                    transition={{duration:0.5, delay:0.2, ease: "easeOut"}}
                 >
                     <span className='gradient-text'>Get in Touch</span>
                 </motion.h2>
-                <motion.p 
-                    className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300'
+                <motion.p
+                    className='text-center max-w-3xl mx-auto mt-5 mb-16 font-Ovo text-gray-600 dark:text-gray-300 motion-element'
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{delay:0.3,duration:0.3}}
+                    transition={{duration:0.5, delay:0.3, ease: "easeOut"}}
                 >
                     I'd love to hear from you! Whether you have a project in mind, want to collaborate, 
                     or just want to say hello, feel free to reach out.
                 </motion.p>
 
-                <motion.div 
-                    className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto'
+                <motion.div
+                    className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto motion-element'
                     initial={{opacity:0}}
                     whileInView={{opacity:1}}
                     viewport={{ once: true, amount: 0.2 }}
-                    transition={{duration:0.4, delay:0.4}}
+                    transition={{duration:0.5, delay:0.4, ease: "easeOut"}}
                 >
                     {/* Contact Info */}
                     <motion.div
                         initial={{opacity:0, x:-50}}
                         whileInView={{opacity:1, x:0}}
                         viewport={{ once: true, amount: 0.3 }}
-                        transition={{duration:0.6, delay:0.8}}
+                        transition={{duration:0.6, delay:0.8, ease: "easeOut"}}
+                        className="motion-element"
                     >
                         <h3 className='text-2xl font-bold mb-8 gradient-text'>Let's Connect</h3>
                         <div className='space-y-6'>
@@ -131,9 +132,9 @@ const Contact = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.3 }}
-                                    transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+                                    transition={{ duration: 0.6, delay: 1 + index * 0.1, ease: "easeOut" }}
                                     whileHover={{ x: 10 }}
-                                    className='flex items-center gap-4 glass rounded-xl p-6 hover:shadow-glow transition-all duration-300'
+                                    className='flex items-center gap-4 glass rounded-xl p-6 hover:shadow-glow contact-card motion-element'
                                 >
                                     <div className='w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center'>
                                         <info.icon className='w-6 h-6 text-white' />
